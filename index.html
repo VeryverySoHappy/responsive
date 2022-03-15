@@ -1,0 +1,177 @@
+<!-- 면접을 볼 때 몇개 단위로 나눌 수 있냐고 물어봄 -->
+<!-- media를 몇개까지 할 수 잇냐고 물어봄 -->
+
+<!-- 5개로 줄일 수 잇냐고 물어봄 -->
+<!-- 기기를 5종류로 해서 만들 수 있냐고 물어봄 -->
+<!-- pc, 테블릿pc, 데스크탑, 모바일, 하나 더 집어넣음(pc 중에서 작은거나 큰거)-->
+
+<!-- 제일 큰거를 먼저 작업(웹 페이지) -->
+<!-- 우선순위를 잘 따져서 작업해야됌 -->
+
+<!-- 요즘엔 가로 세로 바꾸는거 막아놓은 곳도 꽤 많음 -->
+
+<!-- 반응형은 오래걸림 웹페이지 1주 걸리면 2~3주가 걸릴 수도 있음 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 반응형을 할 때 반드시 있어야 됌 -->             <!-- 기본값은 1.0 -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <!-- 종로구청 -->
+  <!--  user-scalable=no -->
+  <!-- 사용자가 크기를 조절할 수 없도록 -->
+  <!-- minimum-scale=1, maximum-scale=1 -->
+  <!-- 최소값과 최대값은 무조건 1이어야됌 -->
+
+
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, user-scalable=yes"> -->
+  <!-- 서초구청 -->
+  <!-- initial-scale =1.0 처음에 1.0 -->
+  <!-- user-scalable=yes -->
+  <!-- 사용자가 크기값을 조절할 수 있도록 -->
+  <!-- maximum-scale=3.0 -->
+  <!-- 사용자가 3배까지 조절할 수 있어 -->
+
+
+  <!-- 종로구청 방법대로 해도 되구 서초구청 방법대로 해도됌 -->
+  <!-- 두개가 다 있으면 안 됌, 둘 중 하나만 있어야됌 -->
+  <title>Document</title>
+  <style>
+    .wrap{
+      width: 100%;
+      height: 150px;
+      background: #fc0;
+    }
+    /* 768이하일 때 */
+    @media all and (min-width:768px) {
+      /* 768이상일 때 */
+      .wrap{
+        width: 100%;
+        height: 150px;
+        background: green;
+      }
+    }
+
+      .wrap_2 {
+      width: 100%;
+      height: 150px;
+      background: #07c;
+      }
+      /* 768이상일 때 파랑 */
+      @media all and (max-width:768px) {
+      .wrap_2{
+        width: 100%;
+        height: 150px;
+        background: green;
+        /* 768이하일 때 초록색 */
+      }
+    }
+    .wrap_3{
+      width: 100%;
+      height: 150px;
+      background: #fc0;
+    }
+    @media all and (min-width:768px) and (max-width:1024px){
+      /* 768~1024일 때 */
+      .wrap_3{
+        width: 100%;
+        height: 150px;
+        background: rgb(113, 4, 116);
+      }
+    }
+
+    .wrap_4{
+      width: 100%;
+      height: 150px;
+      background: #fc0;
+    }
+    @media all and (width:768px), (width:1024px){
+      /* (또는)   둘 중에 하나의 값이 맞았을 때*/
+      /* 정확하게 768px 이거나 1024일 때 */
+      .wrap_4{
+        width: 100%;
+        height: 150px;
+        background: rgb(113, 4, 116);
+      }
+    }
+
+    .wrap_6{
+      width: 100%;
+      height: 150px;
+      background: #fc0;
+    }
+    @media all and (orientation:portrait){
+      /* 세로 모드일 때 빨강 */
+      .wrap_6{
+      width: 100%;
+      height: 150px;
+      background: red;
+      }
+    }
+
+    .wrap_7{
+      width: 100%;
+      height: 150px;
+      background: #fc0;
+    }
+    @media all and (orientation:landscape){
+      /* 가로 모드일 때 초록 */
+      .wrap_7{
+      width: 100%;
+      height: 150px;
+      background: green;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    @media all and (min-width:768px){
+      <!-- 사용자의 해상도가 768이상일 때 코드가 실행됌 -->
+    }
+  </div>
+
+  <div class="wrap_2">
+    @media all and (max-width:768px){
+      <!-- 사용자의 해상도가 768이하일 때 코드가 실행됌 -->
+      <!-- 해상도 : 몇개의 점이 사용되는가에 대한 것 -->
+    }
+  </div>
+
+  <div class="wrap_3">
+    @media all and (min-width:768px) and (max-width:1024px){
+      <!-- 사용자의 해상도가 768이상이고 1024 이하일 때 코드가 실행됌 -->
+    }
+  </div>
+
+  <div class="wrap_4">
+    @media all and (width:768px), (width:1024px){
+      <!-- 뷰포트의 너비가 768이거나 1024일 때 -->
+    }
+  </div>
+
+  <div class="wrap_5">
+    @media all and (device-width:768px) and (device-width:1024px){
+      <!-- 스크린 너비가 768이거나 1024일 때 -->
+      <!-- 기기의 너비가 반환되서 됌 -->
+    }
+  </div>
+
+  <div class="wrap_6">
+    @media all and (orientation:portrait){
+      <!-- 세로 모드-->
+    }
+  </div>
+
+  <div class="wrap_7">
+    @media all and (orientation:landscape){
+      <!-- 가로 모드-->
+    }
+  </div>
+
+
+</body>
+</html>
