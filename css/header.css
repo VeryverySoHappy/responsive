@@ -1,0 +1,304 @@
+#wrapper {
+  width: 100%;
+  position: relative;
+}
+#header {
+  width: 100%;
+  position: relative;
+}
+.intro_wrap {
+  width: 1024px;
+  margin: 0 auto;
+  height: 60px;
+  position: relative;
+}
+
+.intro_wrap * {
+  vertical-align: middle;
+}
+.intro_group {
+  /* float: right; */
+  position: absolute;
+  right: 0;
+  top: 10px;
+  /* overflow: hidden; */
+  /* float해지방법
+  float: right,
+  clearfix,
+  overflow:hidden,
+  display:inline-block
+  */
+}
+.intro_group .intro {
+  display: inline-block;
+}
+.intro_group .intro li{
+  /* display: inline-block; */
+  float: left;
+  margin-left: 10px;
+  font-size: 0.85rem;
+  /* 14*0.85 = 12.6 */
+  /* 12*0.9 = 10.2 */
+  /* 크기가 10이하로 떨어지게 되면 접근성에 안 좋음 */
+}
+.intro_group .intro li:first-child {
+  margin-left: 0;
+}
+
+.intro_group .sns {
+  display: inline-block;
+  /* float: left; */
+  margin-left: 20px;
+}
+.intro_group .sns li {
+  float: left;
+  margin-left: 5px;
+  background: url(../images/icon.png) no-repeat 0 0;
+  background-size: cover;
+}
+.intro_group .sns li a {
+  display: block;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999rem;
+}
+.intro_group .sns li:nth-of-type(1) {
+  background-position: 0 0;
+}
+.intro_group .sns li:nth-of-type(2) {
+  background-position: -41px 0;
+}
+.intro_group .sns li:nth-of-type(3) {
+  background-position: -82px 0;
+}
+
+.intro_wrap h1 {
+  padding-top: 10px;
+}
+
+.intro_wrap h1 span {
+  width: 217px;
+  height: 32px;
+  /* margin-top: 10px; */
+  /* 여기서 마진 탑 하면 안 떨어져서 부모요소에서 패딩 탑 */
+  display: inline-block;
+  background: url(../images/logo.gif) no-repeat 0 0;
+  text-indent: -9999rem;
+}
+
+/* mobile */
+.m_gnb_menu {
+  position: absolute;
+  right: 1%;
+  top: 40px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  display: none;
+  /* 숨겼다가 화면이 작아졌을 때 display:block로 바뀌면 됌 */
+}
+
+.m_gnb_menu a {
+  display: block;
+}
+.m_gnb_menu a span {
+  width: 20px;
+  height: 3px;
+  display: block;
+  background-color: #005eaa;
+  position: absolute;
+}
+.m_gnb_menu a span:nth-of-type(1) {
+  left: 5px;
+  top: 6px;
+}
+.m_gnb_menu a span:nth-of-type(2) {
+  left: 5px;
+  top: 13px;
+}
+.m_gnb_menu a span:nth-of-type(3) {
+  left: 5px;
+  top: 20px;
+}
+
+.gnb_wrap {
+  width: 100%;
+  position: relative;
+  z-index: 999;
+}
+
+.gnb_bg_wrap {
+  width: 100%;
+  background-color: #005eaa;
+  height: 50px;
+}
+
+.gnb {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.gnb_menu {
+  width: 100%;
+}
+.gnb_menu > li {
+  float: left;
+  width: 20%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.2rem;
+}
+
+.gnb_menu > li > a {
+  color: #fff;
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+.gnb_menu > li.on > a {
+  background-color: #fff;
+  color: #222;
+  display: block;
+}
+
+.gnb_menu > li > a::before {
+  content: '';
+  width: 0;
+  height: 3px;
+  background-color: #005eaa;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 0.6s ease;
+}
+
+.gnb_menu > li > a:hover::before {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #005eaa;
+}
+
+.deth2_menu {
+  background-color: #005eaa;
+}
+
+.deth2_menu > li {
+  line-height: 3rem;
+}
+
+.deth2_menu > li > a {
+  color: #fff;
+  font-size: 1.1rem;
+  display: block;
+}
+
+/* script */
+.bg_gnb {
+  background-color: #005eaa;
+  display: none;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+}
+
+.m_gnb {
+  display: none;
+}
+
+@media all and (min-width:320px) and (max-width:1024px) {
+  /* 반응을 해야하는 것들만 다시 작업 */
+  /* 굳이 손대지 않아도 되는건 작업하지 않아도됌 */
+  .intro_wrap {
+    width: 100%;
+    /*
+    320일땐 320이 100% 
+    780일땐 780이 100%
+    1024일땐 1024가 100%
+    */
+    margin: 0 auto;
+    height: 60px;
+    position: relative;
+  }
+  .intro_group {
+    border-bottom: 1px solid #d9d9d9;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    left: 0%;
+    top: 0;
+    line-height: 30px;
+  }
+  .intro_group .none {
+    display: none;
+  }
+  .intro {
+    margin-left: 1%;
+  }
+  .intro_wrap h1 {
+    padding-top: 40px;
+    margin-left: 1%;
+
+  }
+  .gnb_bg_wrap {
+    display: none;
+  }
+  .m_gnb_menu {
+    display: block;
+  }
+  .m_gnb {
+    /* display: block; */
+    /* 보여지게 해놓고 모양만들기 */
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 50%;
+    background-color: #005eaa;
+    height: 100%;
+  }
+
+  .m_gnb .m_deth1{}
+  .m_gnb .m_deth1 li {
+    line-height: 4rem;
+    background-color: #005eaa;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    width: 100%;
+  }
+  .m_gnb .m_deth1 li a {
+    font-size: 1.2rem;
+    color: #fff;
+    padding-left: 15px;
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+  .m_gnb .m_deth1 li a:after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s ease;
+  }
+  .m_gnb .m_deth1 li a:hover:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s ease;
+  }
+}

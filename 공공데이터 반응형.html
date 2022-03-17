@@ -11,9 +11,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script src="./css/fontawesome.min.css"></script>
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./css/header.css">
   <link rel="stylesheet" type="text/css" href="./css/web.css">
   <link rel="stylesheet" type="text/css" href="./css/mobile.css">
-  <link rel="stylesheet" type="text/css" href="./css/reset.css">
   <title>Document</title>
   <style>
 
@@ -27,34 +28,37 @@
   <div id="wrapper">
     <header id="header">
       <div class="intro_wrap clearfix">
-        <ul class="intro">
-          <li><a href="">로그인</a></li>
-          <li class="none"><a href="">회원가입</a></li>
-          <li class="none"><a href="">사이트맵</a></li>
-          <li><a href="">ENGLISH</a></li>
-        </ul>
-        <ul class="sns none">
-          <li><a href="">페이스북</a></li>
-          <li><a href="">트위터</a></li>
-          <li><a href="">블로그</a></li>
-        </ul>
+        <aside class="intro_group clearfix">
+          <ul class="intro">
+            <li><a href="">로그인</a></li>
+            <li class="none"><a href="">회원가입</a></li>
+            <li class="none"><a href="">사이트맵</a></li>
+            <li><a href="">ENGLISH</a></li>
+          </ul>
+          <ul class="sns none">
+            <li><a href="">페이스북</a></li>
+            <li><a href="">트위터</a></li>
+            <li><a href="">블로그</a></li>
+          </ul>
+        </aside>
+        <h1><span>공공데이터포털</span></h1>
+        
+        <div class="m_gnb_menu">
+          <span class="skip">주메뉴</span>
+          <a href="">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
       </div>
-      <h1><span>공공데이터포털</span></h1>
 
-      <div class="m_gnb_menu">
-        <span class="skip">주메뉴</span>
-        <a href="">
-          <span>1</span>
-          <span>2</span>
-          <span>3</span>
-        </a>
-      </div>
       <nav class="gnb_wrap" id="gnb">
         <h2 class="skip">주메뉴</h2>
         <div class="gnb_bg_wrap">
           <div class="gnb">
             <ul class="gnb_menu">
-              <li><a href="">데이타셋</a>
+              <li class="on"><a href="">데이타셋</a>
                 <ul class="deth2_menu">
                   <li><a href="">파일데이터</a></li>
                   <li><a href="">파일데이터</a></li>

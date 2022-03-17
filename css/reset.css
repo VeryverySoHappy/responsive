@@ -90,3 +90,12 @@ ul {
   clear: both;
   display: block;
 }
+
+.skip {
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+  overflow: hidden;
+  line-height: 0;
+  text-indent: -999rem;
+}
