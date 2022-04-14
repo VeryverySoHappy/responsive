@@ -1,4 +1,5 @@
 @charset "utf-8";
+<<<<<<< HEAD
 
 /* 변화를 시킬 것만 작업하면 됌 */
 @media all and (min-width:320px) and (max-width:1024px){
@@ -69,3 +70,9 @@
     font: none;
   }
 }
+=======
+@media all and (min-width:320px) and (max-width:1024px) {
+  
+}
+@media all and (min-width:320px) and (max-width:666px) {}
+>>>>>>> 326ef9b8a6ffd7d05120cb4b50ba7e09f699a335

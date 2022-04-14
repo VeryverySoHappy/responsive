@@ -174,7 +174,7 @@
 }
 .banner_news .banner5 .bannerImg {
   height: 100px;
-  margin: 7px 0;
+  margin: 10px 0;
   display: block;
 }
 .banner_news .pad10 {padding: 10px;}
@@ -203,13 +203,13 @@
   width: 50%;
   background-color: #269ce3;
   height: 28px;
-  height: 28px;
   text-align: center;
   line-height: 28px;
 }
-.banner6 .best_data li.on {background-color: #666;}
-.banner6 .best_data li a {
-
+.banner6 .best_data > li.on {background-color: #666;}
+.banner6 .best_data > li >  a {
+  color: #fff;
+  display: block;
 }
 .banner6 .best_data ul {
   position: absolute;
@@ -222,7 +222,11 @@
 .contents_wrap {
   width: 100%;
   background-color: #1c384b;
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> 326ef9b8a6ffd7d05120cb4b50ba7e09f699a335
 .contents_box {
   width: 1024px;
   margin: 30px auto;
@@ -232,7 +236,10 @@
 }
 .contents_box a {
   color: #fff;
+<<<<<<< HEAD
   letter-spacing: -0.03rem;
+=======
+>>>>>>> 326ef9b8a6ffd7d05120cb4b50ba7e09f699a335
 }
 .contents_box article {
   float: left;
@@ -257,11 +264,19 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+<<<<<<< HEAD
 .notice_list {
   line-height: 1.5rem;
 }
 .service {
   width: 34%;
+=======
+.notice_list  {line-height: 1.5rem;}
+.service {width: 34%;}
+article .dataopen {
+  width: 34%;
+  margin-right: 0;
+>>>>>>> 326ef9b8a6ffd7d05120cb4b50ba7e09f699a335
 }
 .service_list li {
   float: left;
@@ -274,7 +289,11 @@
 .service_list li:nth-of-type(3),
 .service_list li:nth-of-type(4) {
   border-top: none;
+<<<<<<< HEAD
   border-bottom: none;
+=======
+  border-bottom: 0;
+>>>>>>> 326ef9b8a6ffd7d05120cb4b50ba7e09f699a335
 }
 .service_list li:nth-of-type(1),
 .service_list li:nth-of-type(3),
@@ -282,7 +301,11 @@
   border-right: none;
 }
 .service_list li:hover {
+<<<<<<< HEAD
   background-color: #1e5072;
+=======
+  background-color: #366788;
+>>>>>>> 326ef9b8a6ffd7d05120cb4b50ba7e09f699a335
 }
 article.dataopen {
   width: 34%;
@@ -296,13 +319,22 @@ article.dataopen {
   line-height: 2.5rem;
   text-align: right;
   padding-right: 10px;
+<<<<<<< HEAD
   background-color: #1e5072;
+=======
+  background-color: #366788;
+>>>>>>> 326ef9b8a6ffd7d05120cb4b50ba7e09f699a335
   margin-bottom: 5px;
 }
 .open_banner {
   float: left;
   width: 55%;
 }
+<<<<<<< HEAD
 .open_banner a img {
   width: 100%;
 }
+=======
+.open_banner a{}
+.open_banner a img {width: 100%;}
+>>>>>>> 326ef9b8a6ffd7d05120cb4b50ba7e09f699a335
