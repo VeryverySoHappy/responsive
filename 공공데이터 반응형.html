@@ -5,6 +5,7 @@
 
 <!-- 카드형식으로 디자인하는게 반응형할 때 편함 -->
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,14 +16,16 @@
   <link rel="stylesheet" type="text/css" href="./css/header.css">
   <link rel="stylesheet" type="text/css" href="./css/web.css">
   <link rel="stylesheet" type="text/css" href="./css/mobile.css">
+  <link rel="stylesheet" type="text/css" href="./css/footer.css">
   <title>Document</title>
   <style>
 
   </style>
 </head>
+
 <body>
   <div id="skipMenu">
-    <a href="#container">본문바                               로가기</a>
+    <a href="#container">본문바 로가기</a>
     <a href="#gnb">주메뉴바로가기</a>
   </div>
   <div id="wrapper">
@@ -42,7 +45,7 @@
           </ul>
         </aside>
         <h1><span>공공데이터포털</span></h1>
-        
+
         <div class="m_gnb_menu">
           <span class="skip">주메뉴</span>
           <a href="">
@@ -122,7 +125,7 @@
       <section class="impormation_wrap">
         <div class="impormation_box clearfix">
           <form action="" method="post" name="datasearch" class="datasearch">
-            <input type="text" name="textinput" placeholder="데이터를 검색해 보세요"/>
+            <input type="text" name="textinput" placeholder="데이터를 검색해 보세요" />
             <a href="" class="search_btn">
               <img src="./images/search_btn.png" alt="데이터검색">
             </a>
@@ -141,7 +144,7 @@
           최근 사회 현안 및 이슈 <strong>저출산 고령화</strong>데이터를 확인해 보세요.
         </div>
       </section>
-    
+
       <section class="tab_wrap">
         <div class="tab_news">
           <ul class="tab">
@@ -256,10 +259,10 @@
               <li><a href="">공공데이터 02월 개방현황</a></li>
             </ul>
           </article>
-          
+
           <article class="service">
             <h3>서비스바로가기</h3>
-            <ul class="service_list">
+            <ul class="service_list clearfix">
               <li><a href="">공공데이터제공신청</a></li>
               <li><a href="">공공데이터제공신청</a></li>
               <li><a href="">공공데이터제공신청</a></li>
@@ -274,18 +277,19 @@
             <div class="open_list">
               <li>개방기관:333</li>
               <li>파일데이터:23.233</li>
-              <li>오픈API</li>
+              <li>오픈API:234</li>
               <li>표준데이터:120</li>
             </div>
             <div class="open_banner">
               <a href="">
-                <img src="./images/quality_control.jpg" alt="공공데이터"/>
+                <img src="./images/quality_control.jpg" alt="공공데이터" height="46" />
+                <!-- 이미지 높이를 강제로 맞춤 -->
               </a>
               <a href="">
-                <img src="./images/bigdata_bottom_banner.gif" alt="빅데이터"/>
+                <img src="./images/bigdata_bottom_banner.gif" alt="빅데이터" height="46" />
               </a>
               <a href="">
-                <img src="./images/banner17.png" alt="빅데이터선택"/>
+                <img src="./images/banner17.png" alt="빅데이터선택" height="46" />
               </a>
             </div>
           </article>
@@ -296,7 +300,7 @@
 
     <footer id="footer">
       <div class="footer_wrap">
-        <section class="footer_menu clearfix">
+        <section class="footer_menu none clearfix">
           <ul class="footer_side_menu">
             <li><a href="" class="on">개인정보처리방침</a></li>
             <li><a href="">공공데이터포털약관</a></li>
@@ -333,7 +337,13 @@
             <a href=""><img src="./images/web_award_logo.png" alt="" width="65" height="89"></a>
           </div>
         </div>
+        <div class="m_footer">
+          <p>공공데이터 개방문의 : <span>1566-0000</span></p>
+          <p>문의시간 : 10:00 ~ 17:00 (월~금)</p>
+        </div>
       </div>
     </footer>
-  </body>
+  </div>
+</body>
+
 </html>

@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* 변화를 시킬 것만 작업하면 됌 */
+@media all and (min-width:320px) and (max-width:1024px){
+  .impormation_wrap,
+  .tab_news,
+  .banner_news,
+  .contents_box,
+  .data_list {
+    width: 100%;
+    position: relative;
+  }
+  .impormation_wrap .none {
+    display: none;
+  }
+  .datasearch {
+    float: none;
+    margin: 0 auto;
+    width: 90%;
+    overflow: hidden;
+  }
+  .data_list {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+  }
+  .data_list li {
+    float: left;
+    width: 25%;
+    line-height: 50px;
+  }
+  .banner_news div {
+    width: 40%;
+    margin: 2% 5%;
+  }
+  .contents_box article {
+    float: none;
+    width: 90%;
+    margin: 3% auto;
+  }
+  .open_list {
+    float: none;
+    width: 100%;
+  }
+  .open_banner {
+    float: none;
+    width: 100%;
+  }
+  .open_banner a {
+    float: left;
+    width: 30%;
+    display: block;
+    margin-right: 5%;
+    height: 100%;
+  }
+  .open_banner a:last-child {
+    margin-right: 0;
+  }
+}
+@media all and (min-width:320px) and (max-width:666px){
+  .banner_news {
+    width: 100%;
+    position: relative;
+  }
+  .banner_news div {
+    width: 90%;
+    margin: 2% 5%;
+    font: none;
+  }
+}
