@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @media all and (min-width:1200px) {
+      .container {
+        height: 600px;
+        border: 2px solid #000;
+        display: flex;
+        flex-wrap: wrap;
+        /* 
+        범위 안에 포함되게 하냐 안 하냐 
+        no-wrap :크기와 상관없이 한 줄로
+        */
+        justify-content: flex-start;
+        /* 왼쪽을 기준으로해서 정렬 */
+        align-items: stretch;
+      }
+      .container > div {
+        flex: 1;
+        margin: 10px;
+        border: 2px solid #333;
+        border-radius: 10px;
+        /* 글자 가운데 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 글자 가운데 */
+      }
+    }
+    @media all and (min-width:780px) and (max-width:1200px) {
+      .container {
+        height: 600px;
+        border: 1px solid red;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .container > div {
+        width: 350px;;
+        margin: 10px;
+        border: 1px solid #000;
+        border-radius: 10px;
+      }
+    }
+    @media all and (min-width:360px) and (max-width:779px) {
+      .container {
+        height: 600px;
+        border: 2px solid red;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .container > div {
+        width: 350px;
+        margin: 10px;
+        border: 2px solid #333;
+        border-radius: 10px;
+      }
+      .container .item:nth-of-type(1){
+
+      }
+      .container .item:nth-of-type(2){
+        order: 2;
+      }
+      .container .item:nth-of-type(3){
+        order: 0;
+      }
+      .container .item:nth-of-type(4){
+        order: 1;
+      }
+      .container .item:nth-of-type(5){
+        order: 3;
+      }
+      .container .item:nth-of-type(6){
+        order: 3px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item1">box1</div>
+    <div class="item2">box2</div>
+    <div class="item3">box3</div>
+    <div class="item4">box4</div>
+    <div class="item5">box5</div>
+    <div class="item6">box6</div>
+  </div>
+</body>
+</html>

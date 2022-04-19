@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      width: 1000px;
+      height: 100px;
+      border: 2px solid #07c;
+      display: flex;
+      justify-content: flex-end;
+      /* 오른쪽에서부터 정렬이 됌 */
+      flex-direction: row-reverse;
+      /*
+      순서가 거꾸로됌
+      3,2,1이 됌
+      */
+      flex-wrap: wrap;
+      /* 
+      이걸로하면 옆으로 못 가고 밑으로 떨어짐 
+      item의 크기에 따라서
+      */
+      flex-wrap :nowrap;
+      /* item의 크기가 넘치면 옆으로  하나하나 꽉차게 나열됌 */
+    }
+    .item {
+      width: 50%;
+      /* 절반이라 나머지는 밑으로 떨어져야될거같은데 그렇지 않고 3등분됌 */
+      border: 2px solid red;
+    }
+  </style>
+</head>
+<body>
+  <!-- float는 모든 버전에서 다 적용됌 -->
+  <!-- 반응형이나 모바일 작업할 때 주로 flex를 사용 -->
+  <!-- 섞어서 사용하기도 함 -->
+
+  <!-- float는 부모요소에 float해제하는 방법 사용해야됌
+  flex는 해제 작업 안 해도됌
+  flex는 가로 넓이를 계산할 필요없음
+  -->
+
+  <!-- display:flex는 block요소와 같은 개념 -->
+  <!--
+  display: inline-flex;
+  인라인 요소처럼
+  가로값 x -->
+  <!--
+    display: flex;
+   블록요소처럼 크기값 -->
+  <div class="container">
+    <!-- 부모, 자식한테 줄 수 있는 속성이 다름 -->
+    <!-- 
+      부모(container)한테 줄 수 있는 속성
+      display,
+      flex-flow(flex-direction, flex-wrap),
+      justify-content(정렬)
+      align-item
+    -->
+    <!--
+      자식(item)한테 줄 수 있는 속성
+      order (자식요소의 순서를 바꿔줌)
+      flex(
+        flex-grow
+        flex-shrink
+        flex-basis
+        align-self (center, stretch, flex-end, flex-start, baseline:문자 기준선으로 정렬, auto는 상속 )
+        
+        )
+    -->
+    <div class="item">box1</div>
+    <div class="item">box2</div>
+    <div class="item">box3</div>
+  </div>
+</body>
+</html>
